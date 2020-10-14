@@ -10,24 +10,15 @@ int main(void) {
 	int **ticketnumbers;
 	int counter = 0;
 	int m = 6;
-	printf("%s\n", "Lucky numbers");
 	for (int i = 0; i < N; i++) {
 		scanf_s("%d", &luckynumbers[i]);
 	}
-	printf("%s\n", "Number of tickets");
 	scanf_s("%d", &tickets);
 	ticketnumbers = (int**)malloc(tickets * sizeof(int*));
 	for (int i = 0; i < tickets; i++) {
 		ticketnumbers[i] = (int*)malloc(m * sizeof(int));
 		for (int j= 0; j < m; j++) {
-			printf("Ticket %d number %d: ", i+1, j+1);
 			scanf_s("%d", &ticketnumbers[i][j]);
-		}
-	}
-	for (int i = 0; i < tickets; i++) {
-		printf("\n");
-		for (int j = 0; j < m; j++) {
-			printf("%d ", ticketnumbers[i][j]);
 		}
 	}
 	for (int i = 0; i < tickets; i++) {
@@ -47,16 +38,10 @@ int main(void) {
 		}
 		counter = 0;
 	}
-	{
-
-	}
 	for (int i = 0; i < tickets; i++) {
 		free(ticketnumbers[i]);
 	}
 	free(ticketnumbers);
 	return 0;
-
-	
-	
-	}
+}
 	
